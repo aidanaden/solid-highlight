@@ -1,6 +1,6 @@
 {
   "name": "solid-highlight",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Solid component for syntax highlighting, based on react-highlight and highlightjs' vue plugin",
   "author": {
     "name": "Aidan Aden",
