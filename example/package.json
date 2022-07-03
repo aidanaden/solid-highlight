@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "highlight.js": "^11.5.1",
-    "solid-highlight": "^0.1.0",
+    "solid-highlight": "^0.1.1",
     "solid-js": "^1.4.2"
   }
 }

@@ -1,4 +1,4 @@
-import hljs from "highlight.js";
+import HighlightJS from "highlight.js";
 import { Component, createMemo, mergeProps } from "solid-js";
 import { escapeHtml } from "./utils";
 
@@ -17,7 +17,9 @@ const Highlight: Component<Props> = (_props) => {
   );
 
   const cannotDetectLanguage =
-    !props.autoDetect && !props.language && !hljs.getLanguage(props.children);
+    !props.autoDetect &&
+    !props.language &&
+    !HighlightJS.getLanguage(props.children);
   const className = cannotDetectLanguage ? "" : `hljs ${props.language}`;
 
   const getHighlightedCode = createMemo(() => {
@@ -29,10 +31,10 @@ const Highlight: Component<Props> = (_props) => {
     }
 
     if (props.autoDetect) {
-      const result = hljs.highlightAuto(props.children);
+      const result = HighlightJS.highlightAuto(props.children);
       return result.value;
     } else {
-      const result = hljs.highlight(props.children, {
+      const result = HighlightJS.highlight(props.children, {
         language: props.language,
         ignoreIllegals: props.ignoreIllegals,
       });
