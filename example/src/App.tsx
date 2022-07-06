@@ -1,6 +1,7 @@
 import type { Component } from "solid-js";
 
 import Highlight from "solid-highlight";
+import "highlight.js/styles/stackoverflow-light.css";
 
 const App: Component = () => {
   return (

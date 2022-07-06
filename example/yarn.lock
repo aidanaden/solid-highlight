@@ -664,10 +664,10 @@ semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-solid-highlight@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/solid-highlight/-/solid-highlight-0.1.4.tgz#75329a81fcee8e7a055af40c850edf14c27f5157"
-  integrity sha512-5AsfYkiWGmoUJTVJQVxzR0Czk7kklaWZmSMu3SeYgt5VlFHxDCbjDLSyFPGPqKLjwH76cH8N1x20USZSOyTWkA==
+solid-highlight@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/solid-highlight/-/solid-highlight-0.1.8.tgz#7c9c8f7bb1a2876b271020b9ab4a80a61b4fb058"
+  integrity sha512-hAkKmJt7P+aqvE+Gfarqe/cE2NVosttpgzwrdyAxOKGvXWj4E3F1J2mIPS1oViyRbOVFx/OdvHhRTTZOXYzCAA==
   dependencies:
     highlight.js "^11.5.1"
     solid-js "^1.4.2"

@@ -1,4 +1,5 @@
 import withSolid from "rollup-preset-solid";
+import typescript from "rollup-plugin-typescript2";
 
 export default withSolid({
   input: "src/index.tsx",

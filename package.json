@@ -1,6 +1,6 @@
 {
   "name": "solid-highlight",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "Solid component for syntax highlighting, based on react-highlight and highlightjs' vue plugin",
   "author": {
     "name": "Aidan Aden",
@@ -15,19 +15,18 @@
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
-      "solid": "./dist/source/index.jsx",
       "require": "./dist/highlightjs-solid.min.js",
       "import": "./dist/highlightjs-solid.esm.min.js",
       "types": "./dist/types/index.d.ts"
     }
   },
-  "sideEffects": false,
   "engines": {
     "node": ">=10",
     "yarn": ">=1.22.5"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "dev": "cd example && vite",
@@ -40,11 +39,11 @@
     "rollup-preset-solid": "^1.4.0",
     "typescript": "^4.6.4",
     "vite": "^2.9.9",
-    "vite-plugin-solid": "^2.2.6"
+    "vite-plugin-solid": "^2.2.6",
+    "rollup-plugin-typescript2": "^0.32.1"
   },
   "dependencies": {
     "highlight.js": "^11.5.1",
-    "rollup-plugin-typescript": "^1.0.1",
     "solid-js": "^1.4.2"
   },
   "peerDependencies": {
