@@ -1,6 +1,6 @@
 {
   "name": "solid-highlight",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Solid component for syntax highlighting, based on react-highlight and highlightjs' vue plugin",
   "author": {
     "name": "Aidan Aden",
@@ -49,5 +49,21 @@
   "peerDependencies": {
     "highlight.js": "^11.5.1",
     "solid-js": "^1.4.2"
+  },
+  "keywords": [
+    "solidjs component",
+    "solid-component",
+    "solid",
+    "highlight.js",
+    "syntax",
+    "highlighting",
+    "highlight",
+    "code",
+    "syntax",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidanaden/solid-highlight.git"
   }
 }

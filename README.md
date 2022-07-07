@@ -41,10 +41,14 @@ import Highlight from "solid-highlight";
 
 #### Adding styles
 
-Choose the [theme](https://highlightjs.org/static/demo/) for syntax highlighting and add corresponding styles of highlight.js
+Choose the [theme](https://highlightjs.org/static/demo/) for syntax highlighting and add corresponding styles of highlight.js, either as a stylesheet or by importing in your `index.tsx` file
 
 ```css
   <link rel="stylesheet" href="/path/to/styles/theme-name.css">
+```
+
+```js
+import "highlight.js/styles/stackoverflow-light.css";
 ```
 
 The styles will most likely be in `node_modules/highlight.js/styles` folder.
