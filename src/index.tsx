@@ -45,7 +45,7 @@ const Highlight: Component<Props> = (_props) => {
   return (
     <pre>
       <code
-        class={`${className} ${props.class ?? ""}`}
+        class={`${className} ${props.class || ""}`}
         innerHTML={getHighlightedCode()}
       />
     </pre>
