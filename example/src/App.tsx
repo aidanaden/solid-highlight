@@ -1,16 +1,49 @@
 import type { Component } from "solid-js";
-
 import Highlight from "solid-highlight";
+
 import "highlight.js/styles/stackoverflow-light.css";
 
 const App: Component = () => {
   return (
     <div>
       <Highlight autoDetect={true}>
-        {`function foo() { return 'bar' }`}
+        {`type Props = {
+  class?: string;
+  language?: string;
+  autoDetect?: boolean;
+  ignoreIllegals?: boolean;
+  children: any;
+};
+
+export function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+`}
       </Highlight>
+      <br />
       <pre>
-        <code>{`function foo() { return 'bar' }`}</code>
+        <code>{`type Props = {
+  class?: string;
+  language?: string;
+  autoDetect?: boolean;
+  ignoreIllegals?: boolean;
+  children: any;
+};
+
+export function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+`}</code>
       </pre>
     </div>
   );
