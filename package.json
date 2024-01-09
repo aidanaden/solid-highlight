@@ -48,7 +48,7 @@
     "dev": "vite serve dev",
     "build": "tsup",
     "prepublishOnly": "bun build",
-    "format": "bunx @biomejs/biome check --apply \"./src/**/*.{js,ts,json,css,tsx,jsx}\" \"./example/**/*.{js,ts,json,css,tsx,jsx}\"",
+    "format": "bunx @biomejs/biome check --apply . \"./src/**/*.{ts,json,css,tsx,jsx}\" \"./dev/**/*.{ts,json,css,tsx,jsx}\"",
     "lint": "concurrently bun:lint:*",
     "lint:code": "eslint --ignore-path .gitignore  --fix ./src/**/*.{ts,tsx}",
     "lint:types": "bunx tsc-silent --noEmit -p tsconfig.json --suppress @/node_modules/@solidjs/start/",

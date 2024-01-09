@@ -18,6 +18,6 @@
     }
   },
   "files": {
-    "ignore": ["node_modules", "build", "dist", ".vercel", ".solid"]
+    "ignore": ["node_modules", "build", "dev/dist", "dist", ".vercel", ".solid"]
   }
 }

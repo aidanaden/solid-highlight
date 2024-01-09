@@ -1,10 +1,10 @@
 import HighlightJS from "highlight.js";
 import {
+  type ComponentProps,
+  type ParentComponent,
   createMemo,
   mergeProps,
   splitProps,
-  type ComponentProps,
-  type ParentComponent,
 } from "solid-js";
 
 import { escapeHtml } from "./utils";
@@ -18,7 +18,7 @@ type Props = {
 export const Highlight: ParentComponent<Props> = (_props) => {
   const props = mergeProps(
     { autoDetect: true, ignoreIllegals: true, language: "" },
-    _props
+    _props,
   );
   const [, rest] = splitProps(props, [
     "language",
@@ -44,7 +44,7 @@ export const Highlight: ParentComponent<Props> = (_props) => {
 
     if (cannotDetectLanguage) {
       console.warn(
-        `The language "${props.language}" you specified could not be found.`
+        `The language "${props.language}" you specified could not be found.`,
       );
       return escapeHtml(childrenString);
     }
