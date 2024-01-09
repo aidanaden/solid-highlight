@@ -20,6 +20,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "private": false,
   "sideEffects": false,
   "type": "module",
@@ -47,12 +50,12 @@
   "scripts": {
     "dev": "vite serve dev",
     "build": "tsup",
-    "prepublishOnly": "bun build",
-    "format": "bunx @biomejs/biome check --apply . \"./src/**/*.{ts,json,css,tsx,jsx}\" \"./dev/**/*.{ts,json,css,tsx,jsx}\"",
-    "lint": "concurrently bun:lint:*",
+    "prepublishOnly": "pnpm build",
+    "format": "pnpx @biomejs/biome check --apply . \"./src/**/*.{ts,json,css,tsx,jsx}\" \"./dev/**/*.{ts,json,css,tsx,jsx}\"",
+    "lint": "concurrently pnpm:lint:*",
     "lint:code": "eslint --ignore-path .gitignore  --fix ./src/**/*.{ts,tsx}",
-    "lint:types": "bunx tsc-silent --noEmit -p tsconfig.json --suppress @/node_modules/@solidjs/start/",
-    "update-deps": "bun update"
+    "lint:types": "pnpm tsc-silent --noEmit -p tsconfig.json --suppress @/node_modules/@solidjs/start/",
+    "update-deps": "pnpm update"
   },
   "peerDependencies": {
     "solid-js": "^1.8.0"
