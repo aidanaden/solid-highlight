@@ -1,51 +1,82 @@
 {
   "name": "solid-highlight",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Solid component for syntax highlighting, based on react-highlight and highlightjs' vue plugin",
+  "license": "MIT",
   "author": {
     "name": "Aidan Aden",
-    "email": "vroomvroom@mailbox.org",
+    "email": "aidan@u.nus.edu",
     "url": "https://github.com/aidanaden"
   },
-  "license": "MIT",
-  "type": "module",
-  "source": "src/index.tsx",
-  "main": "dist/highlightjs-solid.min.js",
-  "module": "dist/highlightjs-solid.esm.min.js",
-  "types": "dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/highlightjs-solid.min.js",
-      "import": "./dist/highlightjs-solid.esm.min.js",
-      "types": "./dist/types/index.d.ts"
-    }
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidanaden/solid-highlight.git"
   },
-  "sideEffects": false,
-  "engines": {
-    "node": ">=10",
-    "yarn": ">=1.22.5"
+  "homepage": "https://github.com/aidanaden/solid-highlight#readme",
+  "bugs": {
+    "url": "https://github.com/aidanaden/solid-highlight/issues"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "browser": {},
+  "exports": {
+    "solid": {
+      "development": "./dist/dev.jsx",
+      "import": "./dist/index.jsx"
+    },
+    "development": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/dev.js"
+      }
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "typesVersions": {},
   "scripts": {
-    "dev": "cd example && vite",
-    "build": "rollup -c",
-    "prepublishOnly": "yarn build",
-    "serve": "vite preview"
+    "dev": "vite serve dev",
+    "build": "tsup",
+    "prepublishOnly": "bun build",
+    "format": "bunx @biomejs/biome check --apply \"./src/**/*.{js,ts,json,css,tsx,jsx}\" \"./example/**/*.{js,ts,json,css,tsx,jsx}\"",
+    "lint": "concurrently bun:lint:*",
+    "lint:code": "eslint --ignore-path .gitignore  --fix ./src/**/*.{ts,tsx}",
+    "lint:types": "bunx tsc-silent --noEmit -p tsconfig.json --suppress @/node_modules/@solidjs/start/",
+    "update-deps": "bun up -Li"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.8.0"
   },
   "devDependencies": {
-    "rollup": "2.79.1",
-    "rollup-plugin-typescript2": "0.34.1",
-    "rollup-preset-solid": "2.0.1",
-    "typescript": "5.0.4",
-    "vite": "3.1.8",
-    "vite-plugin-solid": "2.3.9"
-  },
-  "dependencies": {
-    "highlight.js": "^11.6.0",
-    "solid-js": "^1.4.8"
+    "@biomejs/biome": "1.5.0",
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^20.10.7",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.19.11",
+    "esbuild-plugin-solid": "^0.5.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-no-only-tests": "^3.1.0",
+    "highlight.js": "^11.9.0",
+    "jsdom": "^23.2.0",
+    "solid-js": "^1.8.9",
+    "tsup": "^8.0.1",
+    "tsup-preset-solid": "^2.2.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vite-plugin-solid": "^2.8.0"
   },
   "keywords": [
     "solidjs component",
@@ -59,8 +90,7 @@
     "syntax",
     "typescript"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aidanaden/solid-highlight.git"
+  "engines": {
+    "node": ">=18"
   }
 }
