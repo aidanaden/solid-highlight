@@ -18,22 +18,14 @@
 
 ## Documentation
 
-### Example
-
-TBA
-
 ### Installation
 
-- using npm
-
 ```bash
-npm install --save solid-highlight
-```
-
-- using yarn
-
-```bash
-yarn add solid-highlight
+npm i solid-glow
+# or
+yarn add solid-glow
+# or
+pnpm add solid-glow
 ```
 
 ### Usage
