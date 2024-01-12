@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.16
+
+### Patch Changes
+
+- expose src
+
 ## 0.1.15
 
 ### Patch Changes
