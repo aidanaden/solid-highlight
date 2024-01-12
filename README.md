@@ -1,3 +1,7 @@
+<p>
+  <img width="100%" src="https://assets.solidjs.com/banner?type=solid-highlight&background=tiles&project=%20" alt="solid-highlight">
+</p>
+
 # solid-highlight
 
 >
@@ -5,6 +9,7 @@
 [![size](https://img.shields.io/bundlephobia/minzip/solid-highlight?style=for-the-badge)](https://bundlephobia.com/package/solid-highlight)
 [![size](https://img.shields.io/npm/v/solid-highlight?style=for-the-badge)](https://www.npmjs.com/package/solid-highlight)
 ![npm](https://img.shields.io/npm/dw/solid-highlight?style=for-the-badge)
+[![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-cc00ff.svg?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 
 [download-image]: https://img.shields.io/npm/dm/solid-highlight.svg
 [download-url]: https://npmjs.org/package/solid-highlight
