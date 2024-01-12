@@ -55,15 +55,14 @@
     "lint": "concurrently pnpm:lint:*",
     "lint:code": "eslint --ignore-path .gitignore  --fix ./src/**/*.{ts,tsx}",
     "lint:types": "pnpm tsc-silent --noEmit -p tsconfig.json --suppress @/node_modules/@solidjs/start/",
-    "update-deps": "pnpm update"
+    "update-deps": "pnpm update -Li"
   },
   "peerDependencies": {
     "solid-js": "^1.8.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.5.0",
+    "@biomejs/biome": "1.5.1",
     "@changesets/cli": "^2.27.1",
-    "@types/node": "^20.10.8",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
     "concurrently": "^8.2.2",
@@ -74,7 +73,7 @@
     "eslint-plugin-no-only-tests": "^3.1.0",
     "highlight.js": "^11.9.0",
     "jsdom": "^23.2.0",
-    "solid-js": "^1.8.9",
+    "solid-js": "^1.8.11",
     "tsup": "^8.0.1",
     "tsup-preset-solid": "^2.2.0",
     "typescript": "^5.3.3",

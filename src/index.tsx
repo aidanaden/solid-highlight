@@ -43,6 +43,7 @@ export const Highlight: ParentComponent<Props> = (_props) => {
     }
 
     if (cannotDetectLanguage) {
+      // eslint-disable-next-line no-console
       console.warn(
         `The language "${props.language}" you specified could not be found.`,
       );
