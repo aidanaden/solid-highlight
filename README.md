@@ -9,7 +9,7 @@
 [download-image]: https://img.shields.io/npm/dm/solid-highlight.svg
 [download-url]: https://npmjs.org/package/solid-highlight
 
-[![solid-top-loading-bar](https://nodei.co/npm/solid-highlight.png)](https://npmjs.org/package/solid-highlight)
+[![solid-highlight](https://nodei.co/npm/solid-highlight.png)](https://npmjs.org/package/solid-highlight)
 
 ## Documentation
 
