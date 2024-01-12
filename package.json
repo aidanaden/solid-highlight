@@ -18,7 +18,8 @@
     "url": "https://github.com/aidanaden/solid-highlight/issues"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "publishConfig": {
     "access": "public"
