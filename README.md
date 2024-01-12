@@ -21,11 +21,11 @@
 ### Installation
 
 ```bash
-npm i solid-glow
+npm i solid-highlight
 # or
-yarn add solid-glow
+yarn add solid-highlight
 # or
-pnpm add solid-glow
+pnpm add solid-highlight
 ```
 
 ### Usage
