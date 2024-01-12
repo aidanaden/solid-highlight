@@ -1,5 +1,5 @@
+import { Highlight } from "solid-highlight";
 import type { Component } from "solid-js";
-import { Highlight } from "../../src";
 
 import "highlight.js/styles/stackoverflow-light.css";
 
