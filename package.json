@@ -59,7 +59,8 @@
     "update-deps": "pnpm update -Li"
   },
   "peerDependencies": {
-    "solid-js": "^1.8.0"
+    "solid-js": "^1.8.0",
+    "highlight-js": "^11.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.1",
