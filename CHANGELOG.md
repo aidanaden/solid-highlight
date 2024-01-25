@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.18
+
+### Patch Changes
+
+- fix highlightjs package name
+
 ## 0.1.17
 
 ### Patch Changes
