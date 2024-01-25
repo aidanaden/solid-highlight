@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.17
+
+### Patch Changes
+
+- add highlight.js as peer dep
+
 ## 0.1.16
 
 ### Patch Changes
