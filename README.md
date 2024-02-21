@@ -33,7 +33,7 @@ pnpm add solid-highlight
 #### Importing component
 
 ```js
-import Highlight from "solid-highlight";
+import { Highlight } from "solid-highlight";
 ```
 
 #### Adding styles
