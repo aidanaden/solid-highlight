@@ -9,7 +9,7 @@
   "dependencies": {
     "@solidjs/start": "^0.5.9",
     "highlight.js": "11.9.0",
-    "solid-highlight": "^0.1.18",
+    "solid-highlight": "^0.1.19",
     "solid-js": "^1.8.15",
     "vinxi": "0.3.3"
   },
