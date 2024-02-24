@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.22
+
+### Patch Changes
+
+- test: fix bundling
+
 ## 0.1.21
 
 ### Patch Changes

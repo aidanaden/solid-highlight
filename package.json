@@ -1,6 +1,6 @@
 {
   "name": "solid-highlight",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "description": "Solid component for syntax highlighting, based on react-highlight and highlightjs' vue plugin",
   "license": "MIT",
   "author": {
@@ -32,6 +32,10 @@
   "types": "./dist/index.d.ts",
   "browser": {},
   "exports": {
+    "solid": {
+      "development": "./dist/dev.jsx",
+      "import": "./dist/index.jsx"
+    },
     "development": {
       "import": {
         "types": "./dist/index.d.ts",

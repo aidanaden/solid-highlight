@@ -1,3 +1,12 @@
+import Prismjs from "prismjs";
+import {
+  createMemo,
+  mergeProps,
+  splitProps,
+  type ComponentProps,
+  type ParentComponent,
+} from "solid-js";
+
 /**
  * @see https://prismjs.com/#supported-languages
  */
@@ -305,3 +314,40 @@ export const Language = {
   ZIG: "zig",
 } as const;
 export type Language = (typeof Language)[keyof typeof Language];
+
+type Props = {
+  language: string;
+} & ComponentProps<"code">;
+
+export const Highlight: ParentComponent<Props> = (_props) => {
+  const props = mergeProps({ language: "javascript" }, _props);
+  const [, rest] = splitProps(props, [
+    "language",
+    "children",
+    "class",
+    "innerHTML",
+  ]);
+  const languageClass = createMemo(() => `language-${props.language}`);
+  const highlightedCode = createMemo<string | undefined>(() => {
+    const childrenString = props.children?.toString();
+    if (!childrenString) {
+      return;
+    }
+    const grammar = Prismjs.languages[props.language];
+    if (!grammar) {
+      return;
+    }
+    const result = Prismjs.highlight(childrenString, grammar, props.language);
+    return result;
+  });
+
+  return (
+    <pre class="line-numbers">
+      <code
+        class={`${languageClass()} ${props.class || ""}`}
+        innerHTML={highlightedCode()}
+        {...rest}
+      />
+    </pre>
+  );
+};

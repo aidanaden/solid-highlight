@@ -1,11 +1,14 @@
+import { Highlight, Language } from "solid-highlight";
 import { For, createSignal, type Component } from "solid-js";
-import { Highlight, Language } from "../../src";
 
-import "@unocss/reset/tailwind.css";
-import "virtual:uno.css";
+// import "@unocss/reset/tailwind.css";
+// import "virtual:uno.css";
+
+import "prismjs/components/prism-typescript";
+import "prismjs/themes/prism-okaidia.min.css";
 
 const App: Component = () => {
-  const [language, setLanguage] = createSignal<Language>(Language.JAVASCRIPT);
+  const [language, setLanguage] = createSignal<Language>(Language.TYPESCRIPT);
   return (
     <div class="text-sm px-3">
       <label class="flex flex-col gap-1.5 w-fit items-start">

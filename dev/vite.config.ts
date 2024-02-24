@@ -6,13 +6,13 @@ export default defineConfig({
   start: {
     ssr: false,
     server: {
-      preset: "cloudflare-pages-static",
+      preset: "cloudflare-pages",
     },
   },
   plugins: [
     uno(),
     prismjs({
-      languages: ["javascript", "typescript", "html", "css"],
+      languages: "all",
       plugins: ["line-numbers", "show-language"],
       theme: "okaidia",
       css: true,
