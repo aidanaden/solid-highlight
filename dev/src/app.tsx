@@ -55,7 +55,7 @@ export function escapeHtml(value: string): string {
 
 const App: Component = () => {
   return (
-    <div class="text-sm px-3">
+    <div class="text-sm p-3 flex flex-col gap-6">
       <For each={[TS_CODE, ZIG_CODE]}>
         {(code) => {
           const [language, setLanguage] = createSignal<Language>(
@@ -67,7 +67,7 @@ const App: Component = () => {
                 Language:
                 <br />
                 <select
-                  class="ring ring-gray-400 rounded-md p-1"
+                  class="ring ring-slate-400 rounded-md pl-1 py-1 pr-2.5"
                   onChange={(e) => setLanguage(e.target.value as Language)}
                   value={language()}
                 >
@@ -83,7 +83,7 @@ const App: Component = () => {
               <div class="flex items-start gap-3 justify-between">
                 <Highlight language={language()}>{code}</Highlight>
                 <pre>
-                  <code>{code}</code>
+                  <code class="p-3 ring ring-slate-400">{code}</code>
                 </pre>
               </div>
             </div>
