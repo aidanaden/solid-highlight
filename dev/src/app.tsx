@@ -1,11 +1,14 @@
-import { Highlight, Language } from "solid-highlight";
 import { For, createSignal, type Component } from "solid-js";
+import { Highlight, Language } from "../../src";
 
 import "@unocss/reset/tailwind.css";
 import "virtual:uno.css";
 
 import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-zig";
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "prismjs/themes/prism-okaidia.min.css";
 
 const ZIG_CODE = `const std = @import("std");
@@ -67,7 +70,7 @@ const App: Component = () => {
                 Language:
                 <br />
                 <select
-                  class="ring ring-slate-400 rounded-md pl-1 py-1 pr-2.5"
+                  class="ring ring-slate-400 rounded-md pl-1 py-1 pr-2.5 capitalize"
                   onChange={(e) => setLanguage(e.target.value as Language)}
                   value={language()}
                 >
@@ -81,7 +84,9 @@ const App: Component = () => {
                 </select>
               </label>
               <div class="flex flex-col md:flex-row gap-3">
-                <Highlight language={language()}>{code}</Highlight>
+                <Highlight language={language()} class="line-numbers">
+                  {code}
+                </Highlight>
                 <div class="py-2">
                   <pre class="p-3 ring ring-slate-600 rounded-md overflow-x-auto">
                     <code>{code}</code>

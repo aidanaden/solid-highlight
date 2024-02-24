@@ -1,7 +1,9 @@
 import Prismjs from "prismjs";
 import {
+  createEffect,
   createMemo,
   mergeProps,
+  on,
   splitProps,
   type ComponentProps,
   type ParentComponent,
@@ -341,10 +343,16 @@ export const Highlight: ParentComponent<Props> = (_props) => {
     return result;
   });
 
+  createEffect(
+    on([languageClass, highlightedCode], () => {
+      Prismjs.highlightAll();
+    })
+  );
+
   return (
     <pre>
       <code
-        class={`${languageClass()} ${props.class || ""} line-numbers`}
+        class={`${languageClass()} ${props.class || ""}`}
         innerHTML={highlightedCode()}
         {...rest}
       />

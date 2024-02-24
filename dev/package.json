@@ -12,8 +12,7 @@
     "prismjs": "^1.29.0",
     "solid-highlight": "^0.1.24",
     "solid-js": "^1.8.15",
-    "vinxi": "0.3.3",
-    "vite-plugin-prismjs": "^0.0.11"
+    "vinxi": "0.3.3"
   },
   "engines": {
     "node": ">=18"
