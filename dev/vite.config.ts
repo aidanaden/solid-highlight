@@ -4,7 +4,7 @@ import prismjs from "vite-plugin-prismjs";
 
 export default defineConfig({
   start: {
-    ssr: false,
+    ssr: true,
     server: {
       preset: "cloudflare-pages",
     },

@@ -342,9 +342,9 @@ export const Highlight: ParentComponent<Props> = (_props) => {
   });
 
   return (
-    <pre class="line-numbers">
+    <pre>
       <code
-        class={`${languageClass()} ${props.class || ""}`}
+        class={`${languageClass()} ${props.class || ""} line-numbers`}
         innerHTML={highlightedCode()}
         {...rest}
       />
