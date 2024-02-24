@@ -1,4 +1,5 @@
 import { defineConfig } from "@solidjs/start/config";
+import uno from "unocss/vite";
 import prismjs from "vite-plugin-prismjs";
 
 export default defineConfig({
@@ -9,6 +10,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    uno(),
     prismjs({
       languages: ["javascript", "typescript", "html", "css"],
       plugins: ["line-numbers", "show-language"],
@@ -16,4 +18,7 @@ export default defineConfig({
       css: true,
     }),
   ],
+  optimizeDeps: {
+    include: ["prismjs"],
+  },
 });

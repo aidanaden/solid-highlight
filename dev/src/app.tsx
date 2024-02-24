@@ -1,10 +1,26 @@
-import type { Component } from "solid-js";
-import { Highlight } from "../../src";
+import { For, createSignal, type Component } from "solid-js";
+import { Highlight, Language } from "../../src";
+
+import "@unocss/reset/tailwind.css";
+import "virtual:uno.css";
 
 const App: Component = () => {
+  const [language, setLanguage] = createSignal<Language>(Language.JAVASCRIPT);
   return (
-    <div>
-      <Highlight autoDetect={true}>
+    <div class="text-sm px-3">
+      <label class="flex flex-col gap-1.5 w-fit items-start">
+        Language:
+        <br />
+        <select
+          onChange={(e) => setLanguage(e.target.value as Language)}
+          value={language()}
+        >
+          <For each={Object.values(Language)}>
+            {(v) => <option value={v}>{v}</option>}
+          </For>
+        </select>
+      </label>
+      <Highlight language={language()}>
         {`type Props = {
   class?: string;
   language?: string;
