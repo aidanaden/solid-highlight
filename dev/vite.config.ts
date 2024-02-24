@@ -15,7 +15,7 @@ export default defineConfig({
   plugins: [
     uno(),
     prismjs({
-      languages: "all",
+      languages: ["typescript", "javascript", "html", "css"],
       plugins: ["line-numbers", "show-language"],
       theme: "okaidia",
       css: true,
