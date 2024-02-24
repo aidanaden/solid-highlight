@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.24
+
+### Patch Changes
+
+- working build
+
 ## 0.1.23
 
 ### Patch Changes

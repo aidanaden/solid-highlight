@@ -9,9 +9,6 @@ export default defineConfig({
       preset: "cloudflare-pages-static",
     },
   },
-  ssr: {
-    noExternal: ["prismjs"],
-  },
   plugins: [
     uno(),
     prismjs({

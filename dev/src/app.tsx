@@ -80,7 +80,7 @@ const App: Component = () => {
                   </For>
                 </select>
               </label>
-              <div class="flex flex-col md:flex-row gap-3 justify-between">
+              <div class="flex flex-col md:flex-row gap-3">
                 <Highlight language={language()}>{code}</Highlight>
                 <div class="py-2">
                   <pre class="p-3 ring ring-slate-600 rounded-md overflow-x-auto">
