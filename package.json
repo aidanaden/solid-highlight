@@ -1,6 +1,6 @@
 {
   "name": "solid-highlight",
-  "version": "0.1.19",
+  "version": "0.1.24",
   "description": "Solid component for syntax highlighting, based on react-highlight and highlightjs' vue plugin",
   "license": "MIT",
   "author": {
@@ -59,12 +59,13 @@
     "update-deps": "pnpm update -Li"
   },
   "peerDependencies": {
-    "highlight.js": "^11.0.0",
+    "prismjs": "^1.29.0",
     "solid-js": "^1.8.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
     "@changesets/cli": "^2.27.1",
+    "@types/prismjs": "^1.26.3",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "concurrently": "^8.2.2",
@@ -73,7 +74,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-no-only-tests": "^3.1.0",
-    "highlight.js": "^11.9.0",
+    "prismjs": "^1.29.0",
     "solid-js": "^1.8.15",
     "tsup": "^8.0.2",
     "tsup-preset-solid": "^2.2.0",

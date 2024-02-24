@@ -38,37 +38,38 @@ import { Highlight } from "solid-highlight";
 
 #### Adding styles
 
-Choose the [theme](https://highlightjs.org/static/demo/) for syntax highlighting and add corresponding styles of highlight.js, either as a stylesheet or by importing in your `index.tsx` file
-
-```css
-  <link rel="stylesheet" href="/path/to/styles/theme-name.css">
-```
+Choose the [theme](https://highlightjs.org/static/demo/) for syntax highlighting and add corresponding styles of prism.js by importing in your `index.tsx` file
 
 ```js
-import "highlight.js/styles/stackoverflow-light.css";
+import "prismjs/themes/prism-okaidia.min.css";
 ```
 
-The styles will most likely be in `node_modules/highlight.js/styles` folder.
+The styles will most likely be in `node_modules/prismjs/themes` folder.
+
+#### Adding languages
+
+Choose the [languages](https://highlightjs.org/static/demo/) available for syntax highlighting by importing in your `index.tsx` file
+
+```js
+import "prismjs/components/prism-typescript";
+```
+
+The languages will most likely be in `node_modules/prismjs/components` folder.
 
 #### Properties
 
-| Property       | Type               | Default | Description                                                                    |
-| :------------- | :----------------- | :------ | :----------------------------------------------------------------------------- |
-| class          | string             |         | Custom css classes to be included                                              |
-| language       | string (optional)  | `''`    | Language of code to be highlighted (will be detected automatically by default) |
-| autoDetect     | boolean (optional) | `true`  | Whether to automatically detect the language of code to be highlighted         |
-| ignoreIllegals | boolean (optional) | `true`  | Whether to ignore illegal characters in the code to be highlighted             |
+| Property | Type   | Default      | Description                        |
+| :------- | :----- | :----------- | :--------------------------------- |
+| class    | string |              | Custom css classes to be included  |
+| language | string | `javascript` | Language of code to be highlighted |
 
 #### Syntax highlighting of code snippet
 
 Code snippet that requires syntax highlighting should be passed as children to Highlight component in string format.
 
 ```js
-<Highlight autoDetect={true}> {"function foo() { return 'bar' }"} </Highlight>
-```
-
-```js
-<Highlight autoDetect={false} language={"js"}>
-  {"function foo() { return 'bar' }"}
+<Highlight language="javascript">
+  {" "}
+  {"function foo() { return 'bar' }"}{" "}
 </Highlight>
 ```
