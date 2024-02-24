@@ -5,6 +5,7 @@ import "@unocss/reset/tailwind.css";
 import "virtual:uno.css";
 
 import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-zig";
 import "prismjs/themes/prism-okaidia.min.css";
 
 const ZIG_CODE = `const std = @import("std");
