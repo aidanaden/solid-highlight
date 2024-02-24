@@ -4,7 +4,7 @@ import { For, createSignal, type Component } from "solid-js";
 import "@unocss/reset/tailwind.css";
 import "virtual:uno.css";
 
-import "prismjs/components/prism-typescript";
+// import "prismjs/components/prism-typescript";
 import "prismjs/themes/prism-okaidia.min.css";
 
 const App: Component = () => {
