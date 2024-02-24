@@ -83,7 +83,7 @@ const App: Component = () => {
               <div class="flex gap-3 justify-between">
                 <Highlight language={language()}>{code}</Highlight>
                 <div class="py-2">
-                  <pre class="p-1.5 border border-slate-400">
+                  <pre class="p-3 ring ring-slate-600 rounded-md">
                     <code>{code}</code>
                   </pre>
                 </div>
