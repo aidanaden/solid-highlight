@@ -72,7 +72,11 @@ const App: Component = () => {
                   value={language()}
                 >
                   <For each={Object.values(Language)}>
-                    {(v) => <option value={v}>{v}</option>}
+                    {(v) => (
+                      <option value={v} selected={v === language()}>
+                        {v}
+                      </option>
+                    )}
                   </For>
                 </select>
               </label>
