@@ -67,6 +67,7 @@ const App: Component = () => {
                 Language:
                 <br />
                 <select
+                  class="ring ring-gray-400 rounded-md p-1"
                   onChange={(e) => setLanguage(e.target.value as Language)}
                   value={language()}
                 >
@@ -75,7 +76,7 @@ const App: Component = () => {
                   </For>
                 </select>
               </label>
-              <div class="flex items-center justify-between">
+              <div class="flex items-start gap-3 justify-between">
                 <Highlight language={language()}>{code}</Highlight>
                 <pre>
                   <code>{code}</code>
