@@ -62,7 +62,7 @@ const App: Component = () => {
             Language.TYPESCRIPT
           );
           return (
-            <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-1.5">
               <label class="flex flex-col gap-1.5 w-fit items-start">
                 Language:
                 <br />
@@ -82,8 +82,8 @@ const App: Component = () => {
               </label>
               <div class="flex items-start gap-3 justify-between">
                 <Highlight language={language()}>{code}</Highlight>
-                <pre>
-                  <code class="p-3 ring ring-slate-400">{code}</code>
+                <pre class="p-3 ring ring-slate-400">
+                  <code>{code}</code>
                 </pre>
               </div>
             </div>
