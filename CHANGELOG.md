@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.21
+
+### Patch Changes
+
+- feat: add unocss to dev
+
 ## 0.1.20
 
 ### Patch Changes
