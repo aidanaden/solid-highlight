@@ -7,11 +7,12 @@
     "start": "vinxi start"
   },
   "dependencies": {
-    "@solidjs/start": "^0.5.9",
-    "highlight.js": "11.9.0",
-    "solid-highlight": "^0.1.19",
+    "@solidjs/start": "^0.5.10",
+    "prismjs": "^1.29.0",
+    "solid-highlight": "^0.1.20",
     "solid-js": "^1.8.15",
-    "vinxi": "0.3.3"
+    "vinxi": "0.3.3",
+    "vite-plugin-prismjs": "^0.0.11"
   },
   "engines": {
     "node": ">=18"

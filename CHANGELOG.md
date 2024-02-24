@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.20
+
+### Patch Changes
+
+- test prismjs
+
 ## 0.1.19
 
 ### Patch Changes

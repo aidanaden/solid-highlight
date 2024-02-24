@@ -1,7 +1,5 @@
-import { Highlight } from "solid-highlight";
 import type { Component } from "solid-js";
-
-import "highlight.js/styles/stackoverflow-light.css";
+import { Highlight } from "../../src";
 
 const App: Component = () => {
   return (
@@ -14,6 +12,20 @@ const App: Component = () => {
   ignoreIllegals?: boolean;
   children: any;
 };
+
+import { Prettify } from "./Prettify";
+
+/**
+ * Like \`Readonly\`, but also makes all nested properties readonly.
+ */
+export type DeepReadonly<T> = Prettify<_DeepReadonly<T>>;
+
+type _DeepReadonly<T> = T extends Record<string | number | symbol, unknown>
+  ? Readonly<{
+      [P in keyof T]: _DeepReadonly<T[P]>;
+    }>
+  : T;
+
 
 export function escapeHtml(value: string): string {
   return value
@@ -34,6 +46,19 @@ export function escapeHtml(value: string): string {
   ignoreIllegals?: boolean;
   children: any;
 };
+
+import { Prettify } from "./Prettify";
+
+/**
+ * Like \`Readonly\`, but also makes all nested properties readonly.
+ */
+export type DeepReadonly<T> = Prettify<_DeepReadonly<T>>;
+
+type _DeepReadonly<T> = T extends Record<string | number | symbol, unknown>
+  ? Readonly<{
+      [P in keyof T]: _DeepReadonly<T[P]>;
+    }>
+  : T;
 
 export function escapeHtml(value: string): string {
   return value

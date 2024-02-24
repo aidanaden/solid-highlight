@@ -1,13 +1,11 @@
-import HighlightJS from "highlight.js";
+import Prismjs from "prismjs";
 import {
-  type ComponentProps,
-  type ParentComponent,
   createMemo,
   mergeProps,
   splitProps,
+  type ComponentProps,
+  type ParentComponent,
 } from "solid-js";
-
-import { escapeHtml } from "./utils";
 
 type Props = {
   language?: string;
@@ -18,7 +16,7 @@ type Props = {
 export const Highlight: ParentComponent<Props> = (_props) => {
   const props = mergeProps(
     { autoDetect: true, ignoreIllegals: true, language: "" },
-    _props,
+    _props
   );
   const [, rest] = splitProps(props, [
     "language",
@@ -29,12 +27,12 @@ export const Highlight: ParentComponent<Props> = (_props) => {
     "innerHTML",
   ]);
 
-  const cannotDetectLanguage =
-    !props.autoDetect &&
-    !props.language &&
-    props.children &&
-    !HighlightJS.getLanguage(props.children.toString());
-  const className = cannotDetectLanguage ? "" : `hljs ${props.language}`;
+  // const cannotDetectLanguage =
+  //   !props.autoDetect &&
+  //   !props.language &&
+  //   props.children &&
+  //   !Prism.getLanguage(props.children.toString());
+  const className = "language-typescript";
 
   const getHighlightedCode = createMemo(() => {
     const childrenString = props.children?.toString();
@@ -42,24 +40,30 @@ export const Highlight: ParentComponent<Props> = (_props) => {
       return "";
     }
 
-    if (cannotDetectLanguage) {
-      // eslint-disable-next-line no-console
-      console.warn(
-        `The language "${props.language}" you specified could not be found.`,
-      );
-      return escapeHtml(childrenString);
-    }
+    // if (cannotDetectLanguage) {
+    //   // eslint-disable-next-line no-console
+    //   console.warn(
+    //     `The language "${props.language}" you specified could not be found.`
+    //   );
+    //   return escapeHtml(childrenString);
+    // }
 
-    if (props.autoDetect) {
-      const result = HighlightJS.highlightAuto(childrenString);
-      return result.value;
-    } else {
-      const result = HighlightJS.highlight(childrenString, {
-        language: props.language,
-        ignoreIllegals: props.ignoreIllegals,
-      });
-      return result.value;
-    }
+    const result = Prismjs.highlight(
+      childrenString,
+      Prismjs.languages["typescript"]!,
+      "typescript"
+    );
+    return result;
+    // if (props.autoDetect) {
+    //   const result = Prism.highlightAuto(childrenString);
+    //   return result.value;
+    // } else {
+    //   const result = Prism.highlight(childrenString, {
+    //     language: props.language,
+    //     ignoreIllegals: props.ignoreIllegals,
+    //   });
+    //   return result.value;
+    // }
   });
 
   return (
