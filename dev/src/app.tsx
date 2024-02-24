@@ -82,9 +82,11 @@ const App: Component = () => {
               </label>
               <div class="flex gap-3 justify-between bg-red-300">
                 <Highlight language={language()}>{code}</Highlight>
-                <pre>
-                  <code class="p-3 border border-slate-400">{code}</code>
-                </pre>
+                <div class="py-1.5">
+                  <pre class="p-1.5 border border-slate-400">
+                    <code>{code}</code>
+                  </pre>
+                </div>
               </div>
             </div>
           );
