@@ -5,7 +5,7 @@ import "@unocss/reset/tailwind.css";
 import "virtual:uno.css";
 
 // import "prismjs/components/prism-typescript";
-import "prismjs/themes/prism-okaidia.min.css";
+// import "prismjs/themes/prism-okaidia.min.css";
 
 const App: Component = () => {
   const [language, setLanguage] = createSignal<Language>(Language.TYPESCRIPT);

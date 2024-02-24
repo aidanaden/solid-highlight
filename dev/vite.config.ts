@@ -6,8 +6,11 @@ export default defineConfig({
   start: {
     ssr: true,
     server: {
-      preset: "cloudflare-pages",
+      preset: "cloudflare-pages-static",
     },
+  },
+  ssr: {
+    noExternal: ["prismjs"],
   },
   plugins: [
     uno(),
