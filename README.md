@@ -67,9 +67,12 @@ The languages will most likely be in `node_modules/prismjs/components` folder.
 
 Code snippet that requires syntax highlighting should be passed as children to Highlight component in string format.
 
-```js
-<Highlight language="javascript">
+```ts
+import { Highlight, Language } from "solid-highlight";
+
+const [language, setLanguage] = createSignal<Language>(Language.JAVASCRIPT);
+<Highlight language={language()}>
   {" "}
   {"function foo() { return 'bar' }"}{" "}
-</Highlight>
+</Highlight>;
 ```
