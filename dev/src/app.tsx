@@ -1,5 +1,5 @@
+import { Highlight, Language } from "solid-highlight";
 import { For, createSignal, type Component } from "solid-js";
-import { Highlight, Language } from "../../src";
 
 import "@unocss/reset/tailwind.css";
 import "virtual:uno.css";

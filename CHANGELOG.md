@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.25
+
+### Patch Changes
+
+- feat: create effect
+
 ## 0.1.24
 
 ### Patch Changes
