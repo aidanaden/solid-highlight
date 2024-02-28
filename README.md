@@ -38,7 +38,7 @@ import { Highlight } from "solid-highlight";
 
 #### Adding styles
 
-Choose the [theme](https://highlightjs.org/static/demo/) for syntax highlighting and add corresponding styles of prism.js by importing in your `index.tsx` file
+Choose the [theme](https://tutsplus.github.io/syntax-highlighter-demos/prism.html) for syntax highlighting and add corresponding styles of prism.js by importing in your `index.tsx` file
 
 ```js
 import "prismjs/themes/prism-okaidia.min.css";
@@ -48,7 +48,7 @@ The styles will most likely be in `node_modules/prismjs/themes` folder.
 
 #### Adding languages
 
-Choose the [languages](https://highlightjs.org/static/demo/) available for syntax highlighting by importing in your `index.tsx` file
+Choose the [languages](https://prismjs.com/#supported-languages) available for syntax highlighting by importing in your `index.tsx` file
 
 ```js
 import "prismjs/components/prism-typescript";

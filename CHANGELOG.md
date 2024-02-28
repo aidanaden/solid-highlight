@@ -1,5 +1,11 @@
 # solid-highlight
 
+## 0.1.26
+
+### Patch Changes
+
+- update-deps
+
 ## 0.1.25
 
 ### Patch Changes
